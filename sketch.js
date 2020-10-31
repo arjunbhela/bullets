@@ -30,10 +30,10 @@ function setup() {
   weight3=random(400,1500);
   thick4=random(22,83);
 
-  bul1 = createSprite(50,250,50,50);
+  bul1 = createSprite(50,250,30,20);
   bul1.velocityX = speed;
 bul1.shapeColor = "white";
-  bul2= createSprite(50,150,50,50);
+  bul2= createSprite(50,150,30,20);
   bul2.velocityX = speed2;
   bul2.shapeColor = "white";
   wall1 = createSprite(1500,200,100,height/2);
@@ -42,11 +42,11 @@ bul1.shapeColor = "white";
   wall2 = createSprite(1500,200,100,1600);
   wall2.shapeColor = color(80,80,80);
 
-  bul3 = createSprite(50,350,50,50);
+  bul3 = createSprite(50,350,30,20);
   bul3.velocityX = speed3;
   bul3.shapeColor = "white";
 
-  bul4 = createSprite(50,50,50,50);
+  bul4 = createSprite(50,50,30,20);
   bul4.velocityX = speed1;
   bul4.shapeColor = "white";
 }
@@ -54,27 +54,27 @@ function draw() {
   background(0);  
   if (wall1.x-bul1.x < (bul1.width+wall1.width)/2) {
 bul1.velocityX = 0;
-bul1.x = 1425;
-var def = 0.5 * weight * speed * speed/(thick1 * thick1 * thick1)
-if (def>10)  {
+bul1.x = 1435;
+var dam = 0.5 * weight * speed * speed/(thick1 * thick1 * thick1)
+if (dam>10)  {
 bul1.shapeColor=color(255,0,0)
 }
 
-if (def<10) {
+if (dam<10) {
 bul1.shapeColor=color(0,255,0);
 }
   }
 
   if (wall1.x-bul2.x < (bul2.width+wall1.width)/2) {
     bul2.velocityX = 0;
-    bul2.x = 1425;
-    var def = 0.5 * weight * speed * speed/(thick2 * thick2 * thick2)
-    if (def>10)  {
+    bul2.x = 1435;
+    var dam = 0.5 * weight * speed * speed/(thick2 * thick2 * thick2)
+    if (dam>10)  {
     bul2.shapeColor=color(255,0,0)
     }
     
     
-    if (def<10) {
+    if (dam<10) {
     bul2.shapeColor=color(0,255,0);
     }
       }
@@ -82,27 +82,27 @@ bul1.shapeColor=color(0,255,0);
       
       if (wall1.x-bul3.x < (bul3.width+wall1.width)/2) {
         bul3.velocityX = 0;
-        bul3.x = 1425;
-        var def = 0.5 * weight * speed * speed/(thick3 * thick3 * thick3)
-        if (def>10)  {
+        bul3.x = 1435;
+        var dam = 0.5 * weight * speed * speed/(thick3 * thick3 * thick3)
+        if (dam>10)  {
         bul3.shapeColor=color(255,0,0)
         }
         
     
-        if (def<10) {
+        if (dam<10) {
         bul3.shapeColor=color(0,255,0);
         }
           }
 
        if (wall1.x-bul4.x < (bul4.width+wall1.width)/2) {
     bul4.velocityX = 0;
-    bul4.x = 1425;
-    var def = 0.5 * weight * speed * speed/(thick4 * thick4 * thick4)
-    if (def>10)  {
+    bul4.x = 1435;
+    var dam = 0.5 * weight * speed * speed/(thick4 * thick4 * thick4)
+    if (dam>10)  {
     bul4.shapeColor=color(255,0,0)
     }
     
-    if (def<10) {
+    if (dam<10) {
     bul4.shapeColor=color(0,255,0);
     }
       }
